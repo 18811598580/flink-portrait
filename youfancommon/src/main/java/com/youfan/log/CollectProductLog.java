@@ -1,7 +1,7 @@
 package com.youfan.log;
 
 /**
- * Created by li on 2019/1/6.
+ * Created by li on 2019/1/6.商品收藏
  */
 public class CollectProductLog {
     private int productid;//商品id

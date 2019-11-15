@@ -21,7 +21,6 @@ import java.util.List;
 @RequestMapping("hbaseData")
 public class HbaseDataControl {
 
-
     @RequestMapping(value = "baiJiaZhiShuInfo",method = RequestMethod.POST)
     public String baiJiaZhiShuInfo(String userid){
         String result = "";

@@ -3,7 +3,7 @@ package com.youfan.log;
 import java.io.Serializable;
 
 /**
- * Created by li on 2019/1/6.
+ * Created by li on 2019/1/6.商品浏览记录
  */
 public class ScanProductLog implements Serializable{
      private int productid;//商品id

@@ -30,6 +30,7 @@ public class MongodataControl {
     @Autowired
     private MongoDataServiceImpl mongoDataServiceImpl;
 
+    //得到年龄与年代的基本信息
     @RequestMapping(value = "searchYearBase",method = RequestMethod.POST)
     public List<AnalyResult> searchYearBase(){
         List<AnalyResult> list = new ArrayList<AnalyResult>();

@@ -23,7 +23,8 @@ public class HbaseDataViewControl {
     @Autowired
     HbaseDataService hbaseDataService;
 
-    @RequestMapping(value = "resultinfoView",method = RequestMethod.POST,produces = "application/json;charset=UTF-8")
+    @RequestMapping(value = "resultinfoView",method = RequestMethod.POST,
+            produces = "application/json;charset=UTF-8")
     public String resultinfoView(@RequestBody AnalyForm analyForm){
         String type = analyForm.getType();
         String userid = analyForm.getUserid();
