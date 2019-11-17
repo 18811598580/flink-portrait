@@ -98,7 +98,7 @@ public class BaiJiaTask {
                     totaldays += frequencydays*count;
                 }
                 int avrdays = totaldays/list.size();//平均天数
-
+               //定义败家规则
                 //败家指数 = 支付金额平均值*0.3、最大支付金额*0.3、下单频率*0.4
                 //支付金额平均值30分（0-20 5 20-60 10 60-100 20 100-150 30 150-200 40 200-250 60 250-350 70 350-450 80 450-600 90 600以上 100  ）
                 // 最大支付金额30分（0-20 5 20-60 10 60-200 30 200-500 60 500-700 80 700 100）
@@ -141,7 +141,7 @@ public class BaiJiaTask {
                     maxaoumtscore = 100;
                 }
 
-                // 下单平率30分 （0-5 100 5-10 90 10-30 70 30-60 60 60-80 40 80-100 20 100以上的 10）
+                // 下单频率30分 （0-5 100 5-10 90 10-30 70 30-60 60 60-80 40 80-100 20 100以上的 10）
                 int avrdaysscore = 0;
                 if(avrdays>=0 && avrdays < 5){
                     avrdaysscore = 100;
@@ -159,13 +159,14 @@ public class BaiJiaTask {
                     avrdaysscore = 10;
                 }
                 double totalscore = (avraoumtsoce/100)*30+(maxaoumtscore/100)*30+(avrdaysscore/100)*40;
-
+               //败家信息存hbase
                 String tablename = "userflaginfo";
                 String rowkey = userid;
                 String famliyname = "baseinfo";
                 String colum = "baijiasoce";
                 HbaseUtils.putdata(tablename,rowkey,famliyname,colum,totalscore+"");
             }
+            //败家分析
             env.execute("baijiascore analy");
         } catch (Exception e) {
             e.printStackTrace();

@@ -9,7 +9,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.flink.api.common.functions.MapFunction;
 
 /**
- * Created by li on 2019/1/5.
+ * Created by li on 2019/1/5.运营商信息
  */
 public class CarrierMap implements MapFunction<String, CarrierInfo>{
     @Override
