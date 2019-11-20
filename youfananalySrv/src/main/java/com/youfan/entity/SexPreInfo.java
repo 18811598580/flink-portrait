@@ -1,9 +1,11 @@
 package com.youfan.entity;
 
+import lombok.Data;
+
 /**
  * Created by li on 2019/1/6.
  */
-
+@Data
 public class SexPreInfo {
     /**
      * 用户id 订单次数 订单频次 浏览男装
@@ -21,93 +23,4 @@ public class SexPreInfo {
     private int label;//男，女
 
     private String groupfield;//分组
-
-
-    public String getGroupfield() {
-        return groupfield;
-    }
-
-    public void setGroupfield(String groupfield) {
-        this.groupfield = groupfield;
-    }
-
-    public int getUserid() {
-        return userid;
-    }
-
-    public void setUserid(int userid) {
-        this.userid = userid;
-    }
-
-    public long getOrdernum() {
-        return ordernum;
-    }
-
-    public void setOrdernum(long ordernum) {
-        this.ordernum = ordernum;
-    }
-
-    public long getOrderfre() {
-        return orderfre;
-    }
-
-    public void setOrderfre(long orderfre) {
-        this.orderfre = orderfre;
-    }
-
-    public int getManclothes() {
-        return manclothes;
-    }
-
-    public void setManclothes(int manclothes) {
-        this.manclothes = manclothes;
-    }
-
-    public int getWomenclothes() {
-        return womenclothes;
-    }
-
-    public void setWomenclothes(int womenclothes) {
-        this.womenclothes = womenclothes;
-    }
-
-    public int getChildclothes() {
-        return childclothes;
-    }
-
-    public void setChildclothes(int childclothes) {
-        this.childclothes = childclothes;
-    }
-
-    public int getOldmanclothes() {
-        return oldmanclothes;
-    }
-
-    public void setOldmanclothes(int oldmanclothes) {
-        this.oldmanclothes = oldmanclothes;
-    }
-
-    public double getAvramount() {
-        return avramount;
-    }
-
-    public void setAvramount(double avramount) {
-        this.avramount = avramount;
-    }
-
-    public int getProducttimes() {
-        return producttimes;
-    }
-
-    public void setProducttimes(int producttimes) {
-        this.producttimes = producttimes;
-    }
-
-    public int getLabel() {
-        return label;
-    }
-
-    public void setLabel(int label) {
-        this.label = label;
-    }
 }

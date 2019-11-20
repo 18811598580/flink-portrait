@@ -15,7 +15,7 @@ public class Logistic {
 	/**
 	 */
 	public static void LogisticTest() {
-		// TODO Auto-generated method stub
+
 		CreateDataSet dataSet = new CreateDataSet();
 		dataSet = readFile("testSet.txt");
 		ArrayList<Double> weights = new ArrayList<Double>();
@@ -23,6 +23,7 @@ public class Logistic {
 		for (int i = 0; i < 3; i++) {
 			System.out.println(weights.get(i));
 		}
+
 		System.out.println();
 	}
  
