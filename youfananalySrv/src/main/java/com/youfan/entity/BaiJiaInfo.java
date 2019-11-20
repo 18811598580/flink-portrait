@@ -22,4 +22,5 @@ public class BaiJiaInfo {
     private String refundamount;
     private Long count;//数量
     private String groupfield;//分组
+    private List<BaiJiaInfo> list;
 }
