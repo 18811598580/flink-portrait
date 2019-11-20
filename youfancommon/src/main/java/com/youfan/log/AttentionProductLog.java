@@ -1,10 +1,13 @@
 package com.youfan.log;
 
+import lombok.Data;
+
 import java.io.Serializable;
 
 /**
  * Created by li on 2019/1/6.商品信息
  */
+@Data
 public class AttentionProductLog implements Serializable{
      private int productid;//商品id
      private int producttypeid;//商品类别id
@@ -15,76 +18,4 @@ public class AttentionProductLog implements Serializable{
      private int usetype;//终端类型：0、pc端；1、移动端；2、小程序端'
      private String ip;// 用户ip
      private String brand;//品牌
-
-    public int getProductid() {
-        return productid;
-    }
-
-    public void setProductid(int productid) {
-        this.productid = productid;
-    }
-
-    public int getProducttypeid() {
-        return producttypeid;
-    }
-
-    public void setProducttypeid(int producttypeid) {
-        this.producttypeid = producttypeid;
-    }
-
-    public String getOpertortime() {
-        return opertortime;
-    }
-
-    public void setOpertortime(String opertortime) {
-        this.opertortime = opertortime;
-    }
-
-    public int getOperatortype() {
-        return operatortype;
-    }
-
-    public void setOperatortype(int operatortype) {
-        this.operatortype = operatortype;
-    }
-
-    public String getStaytime() {
-        return staytime;
-    }
-
-    public void setStaytime(String staytime) {
-        this.staytime = staytime;
-    }
-
-    public int getUserid() {
-        return userid;
-    }
-
-    public void setUserid(int userid) {
-        this.userid = userid;
-    }
-
-    public int getUsetype() {
-        return usetype;
-    }
-
-    public void setUsetype(int usetype) {
-        this.usetype = usetype;
-    }
-
-    public String getIp() {
-        return ip;
-    }
-
-    public void setIp(String ip) {
-        this.ip = ip;
-    }
-
-    public String getBrand() {
-        return brand;
-    }
-
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
 }
